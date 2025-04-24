@@ -1,0 +1,122 @@
+/**
+ * Basic typography style for copy text
+ */
+
+.header__title {
+    @include typography($font-stock-b, 75px, $base-color, 1.2, 700);
+    @include responsive("large-phone") {
+        @include typography($font-stock-b, 45px, $base-color, 1.2, 700);
+    }
+    @include responsive("small-phone") {
+        @include typography($font-stock-b, 38px, $base-color, 1.2, 700);
+    };
+}
+.header__icons_social {
+    @include typography-icon(15px, $base-color);
+    text-decoration: none;
+    @include responsive("small-phone") {
+        @include typography-icon(13px, $base-color);
+    }
+}
+.header__action_link {
+    @include typography-icon(35px, $base-color);
+    @include responsive("small-phone") {
+        @include typography-icon(25px, $base-color);
+    }
+}
+.about__content_title {
+    @include typography($font-stock-b, 23px, $title-color, 30px, 700);
+}
+.about__content_text {
+    @include typography($font-stock, 15px, $text-color, 28px, 400);
+}
+.about__slider_img {
+    i {
+        @include typography-icon(30px, $title-color)
+    }
+}
+.about__slider_title {
+    @include typography($font-stock-b, 15px, $title-color, 16.5px, 500);
+}
+.about__slider_text {
+    @include typography($font-stock, 13px, $text-color, 24px, 500);
+}
+.portfolio__header_title {
+    @include typography($font-stock-b, 23px, $title-color, 1.1, 700);
+}
+.portfolio__header_item {
+    a {
+        @include typography($font-stock, 14px, $menu-color, 1.42, 400);
+        text-decoration: none;
+    }
+    &:first-child {
+        a {
+            color: $title-color;
+        }
+    }
+}
+.portfolio__content_overlay_cat {
+    @include typography($font-stock, 13px, $title-color, 1.42, 400);
+}
+.portfolio__content_overlay_title {
+    @include typography($font-stock-b, 22px, $dark-color, 1.1, 700);
+}
+.blog__title {
+    @include typography($font-stock-b, 23px, $title-color, 1.1, 700);
+}
+.blog__content_item {
+    text-decoration: none;
+}
+.blog__content_title {
+    @include typography($font-stock-m, 18px, $dark-color, 27px, 500);
+}
+.blog__content_text {
+    @include typography($font-stock, 15px, $text-color, 28px, 400);
+}
+.blog__content_date {
+    @include typography($font-stock, 12px, #b9b9b9, 1.42, 400);
+    strong {
+        @include typography($font-stock, 12px, $dark-color, 1.42, 600);
+    }
+}
+.blog__more {
+    a {
+        @include typography($font-stock, 13px, $title-color, 17px, 400);
+        text-decoration: none;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+.contact__info_title {
+    @include typography($font-stock-b, 23px, $title-color, 1.1, 700);
+}
+.contact__info_content {
+    @include typography($font-stock, 14.5px, #414141, 36px, 400);
+}
+.contact__info_icon {
+    @include typography-icon(13px, $dark-color);
+    text-decoration: none;
+}
+.contact__form_title {
+    @include typography($font-stock-b, 23px, $title-color, 30px, 700);
+}
+.contact__form_btn {
+    button {
+        @include typography($font-stock, 13px, $title-color, 17px, 400);
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+.footer__social_link {
+    @include typography($font-stock, 13px, #b1b1b1, 1.42, 400);
+    list-style: none;
+    text-decoration: none;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.footer__copyright {
+    @include typography($font-stock, 14px, #757575, 27px, 400);
+}

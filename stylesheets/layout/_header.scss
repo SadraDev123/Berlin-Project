@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../imgs/headerbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    @include section-shape(21% 99%);
+    @include responsive("large-phone") {
+        @include section-shape(21% 93%);
+    };
+    @include responsive("small-phone") {
+        @include section-shape(21% 95%);
+    };
+}
+.container--flex {
+    height: inherit;
+    align-content: center;
+}
+.header__title {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+.header__icons {
+    flex-basis: 100%;
+    i {
+        padding: 0 10px;
+        @include responsive("small-phone") {
+            padding: 0 8px;
+        }
+    }
+}
+.header__action {
+    padding: 50px;
+    i {
+        transform: translateY(50px);
+        animation: 2s action infinite 1s;
+    }
+}

@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+    width: 100%;
+    padding: 90px 0;
+    background: $dark-color;
+}
+.footer__social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer__social_link {
+    padding: 0 12px;
+    transition: all 0.2s ease-in-out;
+}
+.footer__copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.footer__copyright_text {
+    flex-basis: 100%;
+}
+.footer__copyright_designer {
+    flex-basis: 100%;
+}

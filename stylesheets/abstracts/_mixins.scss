@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin typography($font, $size, $color, $l-height, $weight) {
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+    line-height: $l-height;
+    font-weight: $weight;
+}
+@mixin typography-icon($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+@mixin section-shape($point4) {
+    clip-path: polygon(0 0, 100% 0, 100% 82%, $point4, 0 82%);
+}
+@mixin social-color($list) {
+    @each $icon in $list {
+        @if( $icon == fa-facebook-f ) {
+            & .#{$icon} {
+                color: #3b5998;
+            }
+        } @else if( $icon == fa-twitter ) {
+            & .#{$icon} {
+                color: #55acee;
+            }
+        } @else if( $icon == fa-instagram ) {
+            & .#{$icon} {
+                color: #cd486b;
+            }
+        } @else if( $icon == fa-behance ) {
+            & .#{$icon} {
+                color: #1769ff;
+            }
+        } @else if( $icon == fa-basketball-ball ) {
+            & .#{$icon} {
+                color: #ea4c89;
+            }
+        }
+    }
+}
+@mixin responsive($device) {
+    @if($device == "small-phone") {
+        @media (max-width:575.98px) {
+            @content;
+        }
+    } @else if($device == "large-phone") {
+        @media (max-width:767.98px) {
+            @content;
+        }
+    } @else if($device == "tablet") {
+        @media (max-width:991.98px) {
+            @content;
+        }
+    } @else if($device == "laptop") {
+        @media (max-width:1199.98px) {
+            @content;
+        }
+    }
+}
